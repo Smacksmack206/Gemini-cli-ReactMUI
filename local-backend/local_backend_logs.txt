@@ -1,0 +1,5 @@
+
+> gemini-cli-backend@1.0.0 start
+> node server.js
+
+Backend server listening at http://localhost:3002

@@ -1,0 +1,478 @@
+
+> gemini-cli-web@0.1.0 dev
+> concurrently "npm start" "docker-compose up -d --build backend" "npm --prefix local-backend start --raw"
+
+[1] time="2025-07-18T20:32:21-04:00" level=warning msg="/Users/home/gemini-cli-web/docker-compose.yml: the attribute `version` is obsolete, it will be ignored, please remove it to avoid potential confusion"
+[2] npm warn Unknown cli config "--raw". This will stop working in the next major version of npm.
+[2] 
+[2] > gemini-cli-backend@1.0.0 start
+[2] > node server.js
+[2] 
+[0] 
+[0] > gemini-cli-web@0.1.0 start
+[0] > react-scripts start
+[0] 
+[2] Backend server listening at http://localhost:3002
+[1] #1 [internal] load local bake definitions
+[1] #1 reading from stdin 381B done
+[1] #1 DONE 0.0s
+[1] 
+[1] #2 [internal] load build definition from Dockerfile
+[1] #2 transferring dockerfile: 401B done
+[1] #2 DONE 0.0s
+[1] 
+[1] #3 [auth] library/node:pull token for registry-1.docker.io
+[1] #3 DONE 0.0s
+[1] 
+[1] #4 [internal] load metadata for docker.io/library/node:20-alpine
+[0] (node:51286) [DEP0176] DeprecationWarning: fs.F_OK is deprecated, use fs.constants.F_OK instead
+[0] (Use `node --trace-deprecation ...` to show where the warning was created)
+[0] (node:51286) [DEP_WEBPACK_DEV_SERVER_ON_AFTER_SETUP_MIDDLEWARE] DeprecationWarning: 'onAfterSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+[0] (node:51286) [DEP_WEBPACK_DEV_SERVER_ON_BEFORE_SETUP_MIDDLEWARE] DeprecationWarning: 'onBeforeSetupMiddleware' option is deprecated. Please use the 'setupMiddlewares' option.
+[1] #4 DONE 0.8s
+[1] 
+[1] #5 [internal] load .dockerignore
+[1] #5 transferring context: 2B done
+[1] #5 DONE 0.0s
+[1] 
+[1] #6 [1/5] FROM docker.io/library/node:20-alpine@sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72bb262799
+[1] #6 resolve docker.io/library/node:20-alpine@sha256:df02558528d3d3d0d621f112e232611aecfee7cbc654f6b375765f72bb262799 0.0s done
+[1] #6 DONE 0.0s
+[1] 
+[1] #7 [internal] load build context
+[1] #7 transferring context: 58.70kB 0.0s done
+[1] #7 DONE 0.1s
+[1] 
+[1] #8 [2/5] WORKDIR /app
+[1] #8 CACHED
+[1] 
+[1] #9 [3/5] COPY package.json yarn.lock ./
+[1] #9 CACHED
+[1] 
+[1] #10 [4/5] RUN yarn install --frozen-lockfile
+[1] #10 CACHED
+[1] 
+[1] #11 [5/5] COPY . .
+[1] #11 CACHED
+[1] 
+[1] #12 exporting to image
+[1] #12 exporting layers done
+[1] #12 exporting manifest sha256:25c37c5d28299e9c7a01d57dd7b67e723b8b430375a8c986770b8ae83b6280c7 done
+[1] #12 exporting config sha256:f9716e2599a4274433426c5e1cf70b9f046b9f82431da9195dab630545d39f84 done
+[1] #12 exporting attestation manifest sha256:b9d97ededa6230058343fccca1c280f100605267435a26e6c25f421c61eb8956 0.0s done
+[1] #12 exporting manifest list sha256:af0f5de7a8b6461ded8458852962db51815c745b96101b3286c505b222ce77c2 done
+[1] #12 naming to docker.io/library/gemini-cli-web-backend:latest
+[1] #12 naming to docker.io/library/gemini-cli-web-backend:latest done
+[1] #12 unpacking to docker.io/library/gemini-cli-web-backend:latest
+[0] Starting the development server...
+[0] 
+[1] #12 unpacking to docker.io/library/gemini-cli-web-backend:latest 0.4s done
+[1] #12 DONE 0.4s
+[1] 
+[1] #13 resolving provenance for metadata file
+[1] #13 DONE 0.0s
+[1]  backend  Built
+[1]  Network gemini-cli-web_default  Creating
+[1]  Network gemini-cli-web_default  Created
+[1]  Container gemini-cli-backend-app  Creating
+[1]  Container gemini-cli-backend-app  Created
+[1]  Container gemini-cli-backend-app  Starting
+[1]  Container gemini-cli-backend-app  Started
+[1] docker-compose up -d --build backend exited with code 0
+[0] Compiled successfully!
+[0] 
+[0] You can now view gemini-cli-web in the browser.
+[0] 
+[0]   Local:            http://localhost:3000
+[0]   On Your Network:  http://10.100.96.107:3000
+[0] 
+[0] Note that the development build is not optimized.
+[0] To create a production build, use yarn build.
+[0] 
+[0] webpack compiled successfully
+[2] Gemini API error: TypeError: fetch failed
+[2]     at node:internal/deps/undici/undici:15482:13
+[2]     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2]     at async makeRequest (/Users/home/gemini-cli-web/local-backend/node_modules/@google/generative-ai/dist/index.js:370:20)
+[2]     at async generateContent (/Users/home/gemini-cli-web/local-backend/node_modules/@google/generative-ai/dist/index.js:809:22)
+[2]     at async /Users/home/gemini-cli-web/local-backend/server.js:47:24
+[2] Gemini API error: TypeError: fetch failed
+[2]     at node:internal/deps/undici/undici:15482:13
+[2]     at process.processTicksAndRejections (node:internal/process/task_queues:105:5)
+[2]     at async makeRequest (/Users/home/gemini-cli-web/local-backend/node_modules/@google/generative-ai/dist/index.js:370:20)
+[2]     at async generateContent (/Users/home/gemini-cli-web/local-backend/node_modules/@google/generative-ai/dist/index.js:809:22)
+[2]     at async /Users/home/gemini-cli-web/local-backend/server.js:47:24
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack/hot/dev-server.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/src/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:769:23
+[0]     at /Users/home/gemini-cli-web/node_modules/neo-async/async.js:2830:7
+[0]     at done (/Users/home/gemini-cli-web/node_modules/neo-async/async.js:2925:13)
+[0] 
+[0] 1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+[0] webpack compiled with 6 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack/hot/dev-server.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/html-webpack-plugin/lib/loader.js' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:769:23
+[0]     at /Users/home/gemini-cli-web/node_modules/neo-async/async.js:2830:7
+[0]     at done (/Users/home/gemini-cli-web/node_modules/neo-async/async.js:2925:13)
+[0] 
+[0] 1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+[0] webpack compiled with 6 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack/hot/dev-server.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] 1 ERROR in child compilations (Use 'stats.children: true' resp. '--stats-children' for more details)
+[0] webpack compiled with 6 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack/hot/dev-server.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] webpack compiled with 5 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack/hot/dev-server.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] webpack compiled with 5 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] webpack compiled with 5 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] webpack compiled with 5 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Child compilation failed:
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0] ModuleNotFoundError: Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/public/index.html' in '/Users/home/gemini-cli-web'
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/Compilation.js:2237:28
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:949:13
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:10:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:347:22
+[0]     at eval (eval at create (/Users/home/gemini-cli-web/node_modules/tapable/lib/HookCodeFactory.js:33:10), <anonymous>:9:1)
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:532:22
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:167:10
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:807:25
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1032:8
+[0]     at /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModuleFactory.js:1161:5
+[0] 
+[0] webpack compiled with 5 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] ERROR in main
+[0] Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] ERROR in Module not found: Error: Can't resolve '/Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js' in '/Users/home/gemini-cli-web'
+[0] 
+[0] webpack compiled with 4 errors
+[0] Compiling...
+[0] Failed to compile.
+[0] 
+[0] Error: Cannot find module 'emojis-list'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/loader-utils/lib/interpolateName.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-utils/lib/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/loader/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/loadLoader.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/LoaderRunner.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModule.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack-manifest-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0] ERROR in ./src/index.js
+[0] Module build failed (from ./node_modules/@pmmmwh/react-refresh-webpack-plugin/loader/index.js):
+[0] Error: Cannot find module 'emojis-list'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/loader-utils/lib/interpolateName.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-utils/lib/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/@pmmmwh/react-refresh-webpack-plugin/loader/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/loadLoader.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/LoaderRunner.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModule.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack-manifest-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0]     at Module._resolveFilename (node:internal/modules/cjs/loader:1369:15)
+[0]     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+[0]     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+[0]     at Module._load (node:internal/modules/cjs/loader:1179:37)
+[0]     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+[0]     at Module.require (node:internal/modules/cjs/loader:1449:12)
+[0]     at require (node:internal/modules/helpers:135:16)
+[0]     at Object.<anonymous> (/Users/home/gemini-cli-web/node_modules/loader-utils/lib/interpolateName.js:4:20)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1692:14)
+[0] 
+[0] ERROR in ./node_modules/webpack-dev-server/client/index.js?protocol=ws%3A&hostname=0.0.0.0&port=3000&pathname=%2Fws&logging=none&overlay=%7B%22errors%22%3Atrue%2C%22warnings%22%3Afalse%7D&reconnect=10&hot=true&live-reload=true
+[0] Module build failed (from ./node_modules/babel-loader/lib/index.js):
+[0] Error: Cannot find module 'locate-path'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/find-up/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/pkg-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/find-cache-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/cache.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/loadLoader.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/LoaderRunner.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModule.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack-manifest-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0]     at Module._resolveFilename (node:internal/modules/cjs/loader:1369:15)
+[0]     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+[0]     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+[0]     at Module._load (node:internal/modules/cjs/loader:1179:37)
+[0]     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+[0]     at Module.require (node:internal/modules/cjs/loader:1449:12)
+[0]     at require (node:internal/modules/helpers:135:16)
+[0]     at Object.<anonymous> (/Users/home/gemini-cli-web/node_modules/find-up/index.js:3:20)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1692:14)
+[0] 
+[0] ERROR in ./node_modules/webpack/hot/dev-server.js
+[0] Module build failed (from ./node_modules/babel-loader/lib/index.js):
+[0] Error: Cannot find module 'locate-path'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/find-up/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/pkg-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/find-cache-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/cache.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/loadLoader.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/LoaderRunner.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModule.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack-manifest-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0]     at Module._resolveFilename (node:internal/modules/cjs/loader:1369:15)
+[0]     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+[0]     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+[0]     at Module._load (node:internal/modules/cjs/loader:1179:37)
+[0]     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+[0]     at Module.require (node:internal/modules/cjs/loader:1449:12)
+[0]     at require (node:internal/modules/helpers:135:16)
+[0]     at Object.<anonymous> (/Users/home/gemini-cli-web/node_modules/find-up/index.js:3:20)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1692:14)
+[0] 
+[0] ERROR in ./node_modules/@pmmmwh/react-refresh-webpack-plugin/client/ReactRefreshEntry.js
+[0] Module build failed (from ./node_modules/babel-loader/lib/index.js):
+[0] Error: Cannot find module 'locate-path'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/find-up/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/pkg-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/find-cache-dir/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/cache.js
+[0] - /Users/home/gemini-cli-web/node_modules/babel-loader/lib/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/loadLoader.js
+[0] - /Users/home/gemini-cli-web/node_modules/loader-runner/lib/LoaderRunner.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack/lib/NormalModule.js
+[0] - /Users/home/gemini-cli-web/node_modules/webpack-manifest-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0]     at Module._resolveFilename (node:internal/modules/cjs/loader:1369:15)
+[0]     at defaultResolveImpl (node:internal/modules/cjs/loader:1025:19)
+[0]     at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1030:22)
+[0]     at Module._load (node:internal/modules/cjs/loader:1179:37)
+[0]     at TracingChannel.traceSync (node:diagnostics_channel:322:14)
+[0]     at wrapModuleLoad (node:internal/modules/cjs/loader:235:24)
+[0]     at Module.require (node:internal/modules/cjs/loader:1449:12)
+[0]     at require (node:internal/modules/helpers:135:16)
+[0]     at Object.<anonymous> (/Users/home/gemini-cli-web/node_modules/find-up/index.js:3:20)
+[0]     at Module._compile (node:internal/modules/cjs/loader:1692:14)
+[0] 
+[0] ERROR in [eslint] Cannot find module '@eslint-community/regexpp'
+[0] Require stack:
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/rules/no-control-regex.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/rules/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/linter/rules.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/linter/linter.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/linter/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/cli-engine/cli-engine.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/eslint/eslint.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/eslint/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint/lib/api.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint-webpack-plugin/dist/getESLint.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint-webpack-plugin/dist/linter.js
+[0] - /Users/home/gemini-cli-web/node_modules/eslint-webpack-plugin/dist/index.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/config/webpack.config.js
+[0] - /Users/home/gemini-cli-web/node_modules/react-scripts/scripts/start.js
+[0] 
+[0] webpack compiled with 5 errors
