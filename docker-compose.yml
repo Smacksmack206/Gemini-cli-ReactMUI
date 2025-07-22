@@ -1,0 +1,42 @@
+version: '3.8'
+
+services:
+  gemini-cli-gui:
+    build:
+      context: .
+      args:
+        # These args are passed to the Dockerfile during the build process
+        REACT_APP_FIREBASE_API_KEY: "YOUR_FIREBASE_API_KEY"
+        REACT_APP_FIREBASE_AUTH_DOMAIN: "YOUR_FIREBASE_AUTH_DOMAIN"
+        REACT_APP_FIREBASE_PROJECT_ID: "YOUR_FIREBASE_PROJECT_ID"
+        REACT_APP_FIREBASE_STORAGE_BUCKET: "YOUR_FIREBASE_STORAGE_BUCKET"
+        REACT_APP_FIREBASE_MESSAGING_SENDER_ID: "YOUR_FIREBASE_MESSAGING_SENDER_ID"
+        REACT_APP_FIREBASE_APP_ID: "YOUR_FIREBASE_APP_ID"
+        REACT_APP_FIREBASE_MEASUREMENT_ID: "YOUR_FIREBASE_MEASUREMENT_ID"
+        REACT_APP_GEMINI_API_KEY: "YOUR_GEMINI_API_KEY_HERE"
+    ports:
+      - "3000:80"
+    restart: always
+    container_name: gemini-cli-gui-app
+    environment:
+      # These environment variables are available at container runtime.
+      # They should mirror the build args for consistency and runtime access if needed.
+      - REACT_APP_FIREBASE_API_KEY=AIzaSyDlTzcckEagg0-ti-vbkCwSn6lvKwWjqTo
+      - REACT_APP_FIREBASE_AUTH_DOMAIN=gemini-cli-reactmui.firebaseapp.com
+      - REACT_APP_FIREBASE_PROJECT_ID=gemini-cli-reactmui
+      - REACT_APP_FIREBASE_STORAGE_BUCKET=gemini-cli-reactmui.firebasestorage.app
+      - REACT_APP_FIREBASE_MESSAGING_SENDER_ID=485900138732
+      - REACT_APP_FIREBASE_APP_ID=1:485900138732:web:6d5165ecdc12714905cdc9
+      - REACT_APP_FIREBASE_MEASUREMENT_ID=G-RWZYTE1Z6F
+      - REACT_APP_GEMINI_API_KEY=YOUR_GEMINI_API_KEY_HERE # <--- REPLACE THIS WITH YOUR ACTUAL GEMINI API KEY
+
+  backend:
+    build:
+      context: ./backend
+      args:
+        GEMINI_API_KEY: ${GEMINI_API_KEY}
+    ports:
+      - "3001:3001"
+    restart: always
+    container_name: gemini-cli-backend-app
+
